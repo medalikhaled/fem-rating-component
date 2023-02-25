@@ -6,7 +6,7 @@ import "./App.css";
 import SubmitButton from "./components/SubmitButton";
 import ThanxCard from "./components/ThanxCard";
 
-type Rating = 1 | 2 | 3 | 4 | 5;
+export type Rating = 1 | 2 | 3 | 4 | 5;
 
 function App() {
   const [rating, setRating] = useState<Rating>();
@@ -30,7 +30,6 @@ function App() {
       setSubmitted(true);
       console.log(rating);
     } else {
-      //TODO: it chould not be one, add the ask for choosing before submitting
       alert("you have to choose a rating before submitting ");
     }
   }
@@ -40,13 +39,18 @@ function App() {
       <div
         lang="en"
         aria-label="rating card"
-        className="mx-4 rounded-lg bg-darkBlue p-5 desktop:min-h-[320px] desktop:w-[45%] desktop:min-w-[45%] desktop:translate-x-[45%] desktop:p-8"
+        className="mx-4 rounded-2xl bg-darkBlue p-5 desktop:min-h-[320px] desktop:w-[45%] desktop:min-w-[45%] desktop:translate-x-[45%] desktop:p-8"
       >
         {/*  */}
         {submitted ? (
-          <ThanxCard />
+          <ThanxCard rating={rating} isHideen={!isMarked} />
         ) : (
-          <div className="" aria-label="rating card">
+          <div
+            className={
+              submitted ? "hidden transition-all duration-500 ease-out" : ""
+            }
+            aria-label="rating card"
+          >
             <div
               aria-hidden
               className="pointer-events-none mb-3 grid aspect-square w-9 place-content-center rounded-full bg-mediumGrey bg-opacity-20 py-2
