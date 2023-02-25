@@ -7,34 +7,47 @@ export default function RatingPalette({
 }) {
   return (
     <ul className=" flex w-full items-center justify-between py-4">
-      <li className="ransition-all grid h-10 w-10 cursor-pointer place-content-center rounded-full bg-mediumGrey bg-opacity-20 p-2 text-lightGrey duration-300 ease-in hover:bg-accentOrange hover:text-primaryWhite active:bg-accentOrange">
+      <li>
         <input
           type="button"
           onClick={(e) => handleRatingClick(e)}
           value={1}
-          className="cursor-pointer"
+          className="grid h-10 w-10 cursor-pointer  place-content-center rounded-full bg-mediumGrey bg-opacity-20 p-2 text-lightGrey transition-all duration-300 ease-in hover:bg-accentOrange hover:text-primaryWhite active:bg-accentOrange"
         />
       </li>
-      <li className="ransition-all grid h-10 w-10 cursor-pointer place-content-center rounded-full bg-mediumGrey bg-opacity-20 p-2 text-lightGrey duration-300 ease-in hover:bg-accentOrange hover:text-primaryWhite active:bg-accentOrange">
+      <li className="">
         <input
-          className="cursor-pointer"
+          className="grid h-10 w-10 cursor-pointer place-content-center rounded-full bg-mediumGrey bg-opacity-20 p-2 text-lightGrey transition-all duration-300 ease-in hover:bg-accentOrange hover:text-primaryWhite active:bg-accentOrange"
           type="button"
           onClick={(e) => handleRatingClick(e)}
           value={2}
-        ></input>
+        />
       </li>
-      <li className="ransition-all grid h-10 w-10 cursor-pointer place-content-center rounded-full bg-mediumGrey bg-opacity-20 p-2 text-lightGrey duration-300 ease-in hover:bg-accentOrange hover:text-primaryWhite active:bg-accentOrange">
+      <li>
         <input
           type="button"
+          className="grid h-10 w-10 cursor-pointer place-content-center rounded-full bg-mediumGrey bg-opacity-20 p-2 text-lightGrey transition-all duration-300 ease-in hover:bg-accentOrange hover:text-primaryWhite active:bg-accentOrange"
           onClick={(e) => handleRatingClick(e)}
           value={3}
-        ></input>
+        />
       </li>
-      <li className="ransition-all grid h-10 w-10 cursor-pointer place-content-center rounded-full bg-mediumGrey bg-opacity-20 p-2 text-lightGrey duration-300 ease-in hover:bg-accentOrange hover:text-primaryWhite active:bg-accentOrange">
-        <input type="button" onClick={(e) => handleRatingClick(e)} value={4} />
+
+      <li>
+        <input
+          type="button"
+          className="grid h-10 w-10 cursor-pointer place-content-center rounded-full bg-mediumGrey bg-opacity-20 p-2 text-lightGrey transition-all duration-300 ease-in hover:bg-accentOrange hover:text-primaryWhite active:bg-accentOrange"
+          onClick={(e) => handleRatingClick(e)}
+          value={4}
+        />
       </li>
-      <li className="ransition-all grid h-10 w-10 cursor-pointer place-content-center rounded-full bg-mediumGrey bg-opacity-20 p-2 text-lightGrey duration-300 ease-in hover:bg-accentOrange hover:text-primaryWhite active:bg-accentOrange">
-        <input type="button" onClick={(e) => handleRatingClick(e)} value={5} />
+
+      <li>
+        <input
+          type="button"
+          className="grid h-10 w-10 cursor-pointer place-content-center rounded-full bg-mediumGrey bg-opacity-20 p-2 text-lightGrey transition-all duration-300 ease-in hover:bg-accentOrange hover:text-primaryWhite active:bg-accentOrange"
+          onClick={(e) => handleRatingClick(e)}
+          value={5}
+        />
       </li>
     </ul>
   );
